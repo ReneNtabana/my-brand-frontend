@@ -1,0 +1,224 @@
+body{
+    /* position: absolute; */
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    background: url(../images/folk-pattern-black.png);
+    background-size: 50%;
+}
+.nav-bar{
+    background: rgba(0, 0, 0, 1);
+    width: 100%;
+    color: #fff;
+    filter: drop-shadow(0px 4px 4px #FFFFFF);
+    display: flex;
+    margin-bottom: 31px;
+}
+/* .home-nav .about-me-nav .skills-nav .portfolio-nav .contact-me-nav .blogs-nav{
+    border: solid blue; 
+} */
+.logo-nav{
+    background-color: white;
+    border-radius: 50%;
+    height: 5px;
+    width: 50px;
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+} 
+.home-nav{
+    height: 30px;
+    margin-left: 300px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: impact, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+ 
+.about-me-nav{
+    height: 60px;
+    margin-left: 60px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: impact, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.skills-nav{
+    height: 30px;
+    margin-left: 60px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: impact, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.portfolio-nav{
+    height: 30px;
+    margin-left: 60px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: impact, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.contact-me-nav{
+    height: 30px;
+    margin-left: 60px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: impact, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.blogs-nav{
+    height: 30px;
+    margin-left: 60px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: impact, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.login-button-nav{
+    border-radius: 20px;
+    background-color: black;
+   font-family: impact, sans-serif;
+   height: 40px;
+   width: 120px;    
+   margin-left: 230px;
+   margin-top: 15px;
+   font-size: 25px;
+   color: #fafafa;
+   text-align: center;
+   filter: drop-shadow(0px 4px 4px #FFFFFF);
+   cursor: pointer;
+}
+
+.Login-text{
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.login-title{
+    color:#FFF;
+    text-align: center;
+    font-size: 50px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(99, 99, 99, 1);
+    width: 400px;
+    height:350px;
+    justify-content: center;
+    border-radius: 50px;
+    margin-left: 570px;
+  }
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-name{
+    font-size: 20px;
+    padding-bottom: 10px; 
+    font-weight: bolder;
+    font-family: Arial;
+    text-align: center;
+    color:#181717;
+}
+
+.admin-password{
+    font-size: 20px;
+    padding-bottom: 10px; 
+    font-weight: bolder;
+    padding-top: 10px;
+    font-family: Arial;
+    text-align: center;
+    color:#181717;
+}
+
+::placeholder{
+    font-size: 15px;
+    font-family: 'poppins', sans serif;
+}
+
+span{
+    position: fixed;
+    padding-bottom: 10px;
+    top: 49%;
+    right: 43%;
+    cursor: pointer;
+    color: #181717;
+}
+ 
+
+.error{
+    color: rgb(136, 4, 4);
+    text-align: center;
+}
+
+.textfield{
+    border-radius: 20px;
+    height: 30px;
+    width: 220px;
+    padding-left: 30px;
+    font-size: 15px;
+    font-family: 'poppins', sans serif;
+}
+
+.admin-button{
+    border-radius: 20px;
+    height: 30px;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    font-size: 20px;
+    filter: drop-shadow(0px 4px 4px #FFFFFF);
+    margin-bottom: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.error{
+align-items: center;
+}
+
+.sign-up{
+    height: 30px;
+    width: 150px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+    color: rgb(189, 216, 220);
+}
+
+.copyright{
+    text-align: center;
+    color: #FFF;
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: black;
+    height: 27px;
+    margin-top: 170px;
+    
+}

@@ -1,0 +1,182 @@
+body{
+    /* position: absolute; */
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    background: url(../images/folk-pattern-black.png);
+    background-size: 50%;
+}
+.nav-bar{
+    background: rgba(0, 0, 0, 1);
+    width: 100%;
+    color: #fff;
+    filter: drop-shadow(0px 4px 4px #FFFFFF);
+    display: flex;
+    margin-bottom: 31px;
+}
+/* .home-nav .about-me-nav .skills-nav .portfolio-nav .contact-me-nav .blogs-nav{
+    border: solid blue; 
+} */
+.logo-nav{
+    background-color: white;
+    border-radius: 50%;
+    height: 5px;
+    width: 50px;
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+} 
+.home-nav{
+    height: 30px;
+    margin-left: 300px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: impact, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+ 
+.about-me-nav{
+    height: 60px;
+    margin-left: 60px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: impact, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.skills-nav{
+    height: 30px;
+    margin-left: 60px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: impact, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.portfolio-nav{
+    height: 30px;
+    margin-left: 60px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: impact, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.contact-me-nav{
+    height: 30px;
+    margin-left: 60px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: impact, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.blogs-nav{
+    height: 30px;
+    margin-left: 60px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: impact, sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.login-button-nav{
+    border-radius: 20px;
+    background-color: black;
+   font-family: impact, sans-serif;
+   height: 40px;
+   width: 120px;    
+   margin-left: 230px;
+   margin-top: 15px;
+   font-size: 25px;
+   color: #FFF;
+   text-align: center;
+   filter: drop-shadow(0px 4px 4px #FFFFFF);
+   cursor: pointer;
+}
+
+.Login-text{
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.skills-title{
+    color:#FFF;
+    text-align: center;
+    font-size: 50px;
+}
+.skills-file{
+display: flex;
+
+}
+
+.img-vector{
+    margin-top: 50px;
+    margin-left: 220px;
+}
+
+.skills{
+    margin-top: 50px;
+    margin-left: 70px;
+}
+
+.middle-skills{
+    padding-top: 40px;
+}
+
+.last-skills{
+    padding-top: 40px;
+}
+
+.social-icons{
+    margin-left: 600px;
+    margin-top: 88px;
+    align-items: center;
+}
+
+.instagram-icon{
+    height: 40px;
+    width: 40px;
+    margin-bottom: 6px;
+}
+.linkedin-icon{
+    margin-left: 15px;
+    margin-bottom: 8px;
+    height: 38px;
+    width: 38px;
+}
+   
+.Gmail-icon{
+    margin-left: 15px;
+    margin-bottom: 1px;
+    height: 54px;
+    width: 50px;
+}
+
+.github-icon{
+    margin-left: 15px;
+    margin-bottom: 7px;
+    height: 40px;
+    width: 40px;
+}
+
+.copyright{
+    text-align: center;
+    color: #FFF;
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: black;
+    height: 27px;
+    margin-top: 4px;
+}

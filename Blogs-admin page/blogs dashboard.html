@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blogs/Dashboard page</title>
+        <link href="blogs dashboard.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <script defer src="blogs dashboard.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <div class="side-nav">
+                <div class="home-nav">
+                    <a href="../Dashboard-admin page/dashboard.html" class="home-page-nav">Dashboard</a>
+                </div>
+                <div class="home-nav">
+                    <a class="blogs-page-nav"><button type="submit" class="home-button">Blogs</button></a>
+                </div>
+                <div class="home-nav">
+                    <a href="../views-admin page/views.html" class="views-page-nav">Views</a>
+                </div>
+                <div class="signout-nav">
+                    <a>Log out</a>
+                </div>
+            </div>
+            <div class="top-nav">
+                <img class="profile-pic" src="../images/profile pic.png" alt="profile pic">
+                <div> 
+                    <h2>Rene Ntabana</h2>
+                    <p>ntabanarene205@gmail.com</p>
+                </div> 
+            </div>
+        </nav>
+            <div>
+                <tr>        <!-- This is rows -->
+                    <td>    <!-- This is columns -->
+                        <form id="dashboard-blog-form" autocomplete="off" onsubmit="onFormSubmit()">
+
+                            <div class="dashboard-blog-form-title">Create a Blog</div>
+                            <div class="form-control">
+                                <input type="text" id="blogId" placeholder="Blog Id">
+                                <div class="error"></div>
+                            </div>
+                            <div class="form-control">
+                                <input type="text" id="authorInput" class="dashboard-form-author-input" placeholder="Author">
+                                <div class="error"></div>
+                            </div>
+                            <div class="form-control">
+                                <input type="text" id="titleInput" class="dashboard-form-title-input" placeholder="Title">
+                                <div class="error"></div>
+                            </div>
+                            <div class="form-control">
+                                <textarea type="text" id="FormTextInput" class="dashboard-form-body-input" placeholder="Body" rows="9" cols="70"></textarea>
+                                <div class="error"></div>
+                            </div>
+                            <div>
+                                <button type="submit" id="dashboard-blog-form-save-button">Save Blog</button>
+                            </div>
+
+                        </form>
+                        <td class="section-b">
+                            <table class="blog-table" id="blog-table">
+                                
+                                <thead class="blog-table-header">
+                                    <tr>
+                                        <th id="blog-table-header1">N</th>
+                                        <th id="blog-table-header2">Title</th>
+                                        <th id="blog-table-header3">Author</th>
+                                        <th id="blog-table-header4">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="blogs-t-body">
+                                </tbody>
+                            </table>
+                        </td>
+                    </td>
+                </tr>
+            </div>
+    </body>
+</html>

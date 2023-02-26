@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Signup page</title>
+        <link href="signup.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <script defer src="Signup.js"></script>
+    </head>
+    <body>
+        <nav>
+            <header class="nav-bar">
+                <div class="logo-nav">RP</div>
+                <a class="home-nav" href="../home page/Index.html">Home</a>
+                <a class="about-me-nav" href="../About me page/about me.html">About me</a>
+                <a class="skills-nav" href="../Skills page/skills.html">Skills</a>
+                <a class="portfolio-nav" href="../Portfolio page/portfolio.html">Portfolio</a>
+                <a class="blogs-nav" href="../Blogs page/blog.html">Blogs</a>
+                <a class="contact-me-nav" href="../Contact me page/contact.html">Contact Me</a>
+                <a class="Login-text" href="../Login page/Login.html"> <button type="submit" class="login-button-nav">
+                Login
+             </button></a> 
+            </header>
+        </nav>
+        
+            <h1 class="signup-title">Signup page</h1>
+          <div class="user-container">
+            <form name="signup-form" id="form" class="signup-form" action="/">
+              <h2>Create account</h2>
+                <div class="input-form">
+                  <label for="username" class="username">
+                  Username
+                  </label>
+                  <input class="textfield" type="text" id="username" name="username" placeholder="username..."/>
+                  <div class="error"></div>
+                </div>
+                <div class="input-form">
+                  <label for="user-email" class="user-email">
+                  Email
+                  </label>
+                  <input class="textfield" type="email" id="user-email" name="user-email" placeholder="email..." />
+                  <div class="error"></div>
+                </div>
+                <div class="input-form">
+                  <label for="user-password" class="user-password">
+                  Password
+                  </label>
+                  <input class="textfield" type="password" id="user-password" name="password" placeholder="password..."/>
+                    <i class="fa fa-eye" aria-hidden="true" id="eye1" onclick="toggle()"></i>
+                  <div class="error"></div>
+                </div>
+                <div class="input-form">
+                  <label for="user-password2" class="user-password2">
+                   Confirm password
+                  </label>
+                  <input class="textfield" type="password" id="user-password2" name="password2" placeholder="password..."/>
+                  <span>
+                    <i class="fa fa-eye" aria-hidden="true" id="eye2" onclick="toggle()"></i>
+                  </span>
+                  <div class="error"></div>
+                </div>
+                <button type="submit" div="sign-up-btn" class="sign-up-btn">Signup</button>
+            </form>
+          </div>
+        <div class="copyright">© Copyright 2023. Made by Rene Ntabana</div>
+
+    </body>
+</html>
