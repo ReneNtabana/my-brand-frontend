@@ -116,20 +116,29 @@ body{
     font-size: 50px;
 }
 
-.contact-info{
+.contact-info-container{
     margin-left: 120px;
     height: 360px;
     width: 400px;
+    background-color: black;
+    filter: drop-shadow(0px 4px 4px #FFFFFF);
+    border-radius: 40px;
+}
+
+p{
+    color: #FFFFFF;
+    font-size: 30px;
+    margin: 10px;
+    padding-top: 10px;
 }
 
 .contact-form{
         display: flex;
-        flex-direction: row;
-        background-color:rgba(99, 99, 99, 1);
-        width: 650px;
-        height:350px;
+        flex-direction: column;
+        background-color:rgb(0, 0, 0);
+        width: 300px;
+        height:380px;
         justify-content: center;
-        border-radius: 50px;
         margin-left: 200px;
 }
 
@@ -146,29 +155,29 @@ body{
 
 .viewer-name{
     font-size: 20px;
-    padding-top: 50px; 
+    padding-top: 20px; 
     font-weight: bolder;
     font-family: Arial;
-    color: #181717;
+    color: #f3efef;
     text-align: center;
 }
 
 .viewer-email{
     font-size: 20px;
-    padding-bottom: 10px; 
+    padding-bottom: 5px; 
     font-weight: bolder;
-    padding-top: 30px;
+    padding-top: 10px;
     font-family: Arial;
-    color: #181717;
+    color: #f3efef;
     text-align: center;
 }
 
 .viewer-message{
     font-size: 20px;
-    padding-bottom: 10px; 
+    padding-bottom: 5px; 
     font-weight: bolder;
-    padding-top: 20px;
-    color:#181717;
+    padding-top: 10px;
+    color:#f3efef;
     font-family: Arial; 
     text-align: center;
     margin-left: 20px;
@@ -188,27 +197,23 @@ body{
     border-radius: 20px;
     height: 40px;
     width: 220px;
-    padding-left: 30px;
+    padding-left: 20px;
     font-size: 15px;
     font-family: 'poppins', sans serif;
+    margin-left: 30px;
 }
 
 .message-textfield{
-    border-radius: 20px;
+    border-radius: 10px;
     padding-left: 20px;
-    height: 200px;
-    width: 250px;
+    width: 220px;
+    height: 60px;
     font-size: 15px;
-    margin-left: 10px;
-    padding-bottom: 60%;
-    padding-top: 10%;
+    margin-left: 30px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     font-family: 'poppins', sans serif;
 
-}
-
-.input-form-message{
-    display: flex;
-    flex-direction: column;
 }
 
 .submit-message-button{
@@ -222,12 +227,26 @@ body{
     margin-bottom: 20px;
     margin-top: 10px;
     cursor: pointer;
-    align-items: center;
+    margin-left: 100px;
 }
+
+.info-container{
+    background-color: #fdfbfbd4;
+    height: 380px;
+
+}
+
+.info-text{
+    color: black;
+    font-size: 20px;
+    margin: 5px;
+}
+
+
 
 .social-icons{
     margin-left: 600px;
-    margin-top: 97px;
+    margin-top: 77px;
     align-items: center;
 }
 

@@ -103,3 +103,9 @@ p {
     font-size: 12px;
     margin-top: 0px;
 }
+
+.user-title{
+    position: absolute;
+    left: 30%;
+    font-size: 40px;
+}
