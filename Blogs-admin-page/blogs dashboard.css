@@ -78,6 +78,7 @@ nav{
     font-size: 30px;
     cursor: pointer;
     left: 30%;
+    text-decoration: none;
 }
 
 .profile-pic{
@@ -204,6 +205,7 @@ p {
 .blog-table-header{
     border: solid rgb(0, 0, 0);
     height: 33px;
+    background-color: #868484;
 }
 
 #blogs-table-header1{

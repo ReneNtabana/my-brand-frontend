@@ -3,6 +3,22 @@ const username = document.getElementById('name')
 const email= document.getElementById('viewer-email')
 const message = document.getElementById('viewer-message')
 
+const userMessage = JSON.parse(localStorage.getItem("userMessage")) ?? []
+
+let isGenuine = localStorage.getItem("genuineUser", "true");
+
+
+
+function addMessage() {
+  currentData  = {
+    username: username.value,
+    email: email.value,
+    userMessage: message.value,
+  }
+  userMessage.push(currentData);
+  localStorage.setItem('userMessage', JSON.stringify('userMessage'));
+}
+
 form.addEventListener('submit', e => {
     e.preventDefault();
 
@@ -57,4 +73,12 @@ const validateInputs = () => {
     } else {
         setSuccess(message);
     }
+
+    if (usernameValue && emailValue && messageValue) {
+        return true;
+        // localStorage.setItem(usernameValue, emailValue, messageValue);
+        // location.reload();
+      } else{
+        return false;
+      }
 }
