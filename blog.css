@@ -195,28 +195,7 @@ p{
   .show-more {
     display: block;
   }
-  
-  .read-more {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 16px;
-    cursor: pointer;
-  }
-  
-  .read-more:hover {
-    background-color: #3e8e41;
-  }
-  
-  .show-more {
-    display: block;
-  }
-  
+
 .blog3-container{
     height: 385px;
     width: 300px;
