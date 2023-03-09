@@ -9,21 +9,19 @@ let isGenuine = localStorage.getItem('genuineUser', 'true');
 
 //! Contact Me Form INTEGRATED
 form.addEventListener('submit', async (event) => {
-  const username = document.querySelector('#form-name').value;
-  const email = document.querySelector('#form-email').value;
-  const subject = document.querySelector('#form-subject').value;
-  const formMessage = document.querySelector('#message-1').value;
-  //   const password2 = document.querySelector('#password2').value;
+  const username = document.querySelector('#name').value;
+  const email = document.querySelector('#viewer-email').value;
+  const formMessage = document.querySelector('#viewer-message').value;
+ 
   event.preventDefault();
 
-  // fetch(`${api}/api/register`, {
-  //   fetch('https://repulsive-frog-jacket.cyclic.app/api/register', {
-  fetch('http://127.0.0.1:7000/api/messages', {
+ 
+  fetch('http://127.0.0.1:5000/api/messages', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
     },
-    body: JSON.stringify({ username, email, subject, message: formMessage }),
+    body: JSON.stringify({ username, email, message: formMessage }),
   })
     .then((response) => {
       return response.json();
@@ -31,10 +29,9 @@ form.addEventListener('submit', async (event) => {
     .then((resp) => {
       alert(resp.message);
       console.log(resp);
-      (document.querySelector('#form-name').value = ''),
-        (document.querySelector('#form-email').value = ''),
-        (document.querySelector('#form-subject').value = ''),
-        (document.querySelector('#message-1').value = '');
+      (document.querySelector('#name').value = ''),
+        (document.querySelector('#viewer-email').value = ''),
+        (document.querySelector('#viewer-message').value = '');
 
     });
 });
