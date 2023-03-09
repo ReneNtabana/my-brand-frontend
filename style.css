@@ -1,7 +1,7 @@
 body{
     /* position: absolute; */
     margin: auto;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(rgba(10, 10, 10, 0.153), rgba(14, 14, 14, 0.037)), url(../images/folk-pattern-black.png);
     background-size: 50%;
 }
