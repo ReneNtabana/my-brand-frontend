@@ -79,7 +79,7 @@ const validateInputs = () => {
       localStorage.setItem("user", JSON.stringify(user));
   
       // Redirect to the dashboard
-      window.location.href = "../Dashboard-admin-page/dashboard.html";
+      window.location.href = "./dashboard.html";
 }
   
 
