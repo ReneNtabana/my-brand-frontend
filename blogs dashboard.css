@@ -73,21 +73,14 @@ nav{
     text-decoration: none;
 }
 
-.profile-pic{
-    margin-left: 80%;
-    height: 50px;
-    margin-top: 15px;
-
-}
-
 h2{
-    margin-left: 5%;
+    margin-left: 80%;
     font-size: 12px;
     margin-top: 25px;
 }
 
 p {
-    margin-left: 5%;
+    margin-left: 80%;
     font-size: 12px;
     margin-top: 0px;
 }
