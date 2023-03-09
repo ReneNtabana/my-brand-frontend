@@ -75,7 +75,7 @@ const validateInputs = () => {
     }
 
  // If the form is valid, store the user's information in local storage
-      const user = { username,email, password };
+      const user = { usernameValue,emailValue, passwordValue };
       localStorage.setItem("user", JSON.stringify(user));
   
       // Redirect to the dashboard
