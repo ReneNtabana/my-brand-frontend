@@ -197,6 +197,11 @@ p{
     display: block;
   }
 
+.fa-solid fa-comment{
+    color: #fafafa;
+}
+
+
 .blog3-container{
     height: 385px;
     width: 300px;
