@@ -1,6 +1,46 @@
 const form = document.getElementById('login-form')
 const adminName = document.getElementById('admin-name')
 const password = document.getElementById('admin-password')
+const data = { usernames: adminNameValue, password: passwordValue };
+fetch('http://localhost:5000/api/login', {
+    // fetch('https://localhost:5000/api/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((resp) => {
+      console.log(resp.data.email);
+      if (resp.data) {
+        localStorage.setItem('token', resp.token);
+        localStorage.setItem('logedIn', resp.data.email);
+        //  console.log(resp.data.username)
+        location.href = './dashboard.html';
+        // location.href =
+        //   'https://majestic-melomakarona-d7b4f4.netlify.app/2-Admin-Panel%20/admin.html';
+      } else {
+        console.log(resp.message);
+        // alert(resp.message)
+      }
+      return resp;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+});
+
+//Show Password Function
+function showPassword() {
+  var show = document.getElementById('password');
+  if (show.type == 'password') {
+    show.type = 'text';
+  } else {
+    show.type = 'password';
+  }
+}
+
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -11,6 +51,7 @@ form.addEventListener('submit', e => {
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
+
 
     errorDisplay.innerText = message;
     inputControl.classList.add('error');
