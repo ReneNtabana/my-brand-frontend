@@ -6,7 +6,7 @@
         <title>Blogs/Dashboard page</title>
         <link href="blogs dashboard.css" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <script defer src="blogs dashboard.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
 
     <body>
@@ -23,16 +23,13 @@
                 </div>
             </div>
             <div class="top-nav">
-                <div> 
-                    <h2>Rene Ntabana</h2>
-                    <p>ntabanarene205@gmail.com</p>
-                </div> 
+               <div class="header">Admin Panel</div>
             </div>
         </nav>
             <div>
-                <tr>        <!-- This is rows -->
-                    <td>    <!-- This is columns -->
-                        <form id="dashboard-blog-form" autocomplete="off" onsubmit="onFormSubmit()">
+                       <!-- This is rows -->
+                        <!-- This is columns -->
+                        <!-- <form id="dashboard-blog-form" autocomplete="off" onsubmit="onFormSubmit()">
 
                             <div class="dashboard-blog-form-title">Create a Blog</div>
                             <div class="form-control">
@@ -40,11 +37,11 @@
                                 <div class="error"></div>
                             </div>
                             <div class="form-control">
-                                <input type="text" id="authorInput" class="dashboard-form-author-input" placeholder="Author">
+                                <input type="text" id="authorsInput" class="dashboard-form-author-input" placeholder="Author">
                                 <div class="error"></div>
                             </div>
                             <div class="form-control">
-                                <input type="text" id="titleInput" class="dashboard-form-title-input" placeholder="Title">
+                                <input type="text" id="titlesInput" class="dashboard-form-title-input" placeholder="Title">
                                 <div class="error"></div>
                             </div>
                             <div class="form-control">
@@ -55,24 +52,73 @@
                                 <button type="submit" id="dashboard-blog-form-save-button">Save Blog</button>
                             </div>
 
-                        </form>
+                        </form> -->
+                        <button type="submit" id="newBlog"><i class="fa fa-plus"></i>&nbsp; Create Blog</button>
                         <td class="section-b">
-                            <table class="blog-table" id="blog-table">
+                            <table class="blog-table">
                                 
                                 <thead class="blog-table-header">
                                     <tr>
                                         <th id="blog-table-header1">N</th>
-                                        <th id="blog-table-header2">Title</th>
-                                        <th id="blog-table-header3">Author</th>
-                                        <th id="blog-table-header4">Action</th>
+                                        <th id="blog-table-header2">Blog Id</th>
+                                        <th id="blog-table-header3">Title</th>
+                                        <th id="blog-table-header4">Image</th>
+                                        <th id="blog-table-header5">Author</th>
+                                        <th id="blog-table-header6">Action</th>
                                     </tr>
                                 </thead>
-                                <tbody class="blogs-t-body">
+                                <tbody class="blogs-t-body"  id="blog-table">
+                                    <!-- <tr>
+                                        <td>hello world</td>
+                                        <td>hello world</td>
+                                        <td>hello world</td>
+                                        <td>hello world</td>
+                                        <td>hello world</td>
+                                        <td>
+                                            <button id="edit-button" title="Edit" type="button"><i class="fa fa-eye"></i></button>
+                                            <button class="delete-button" title="Delete" type="button"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </td>
-                    </td>
-                </tr>
+                    
+            
             </div>
+            <div class="modal">
+                <i class="fa fa-times-circle close-icon"></i>
+                <div class="left-modal">
+                    <img src="./images/pic icon.png" id="blog-image" width="120" height="150" id="blog-image" alt="">
+                    <div class="low-modal">
+                        <i class="fa fa-plus"></i>
+                        <input title="text" class="blogDetails" id="upload-image" type="file">
+                    </div>
+                </div>
+                <div class="right-modal">
+                    <form id="newBlogForm">
+                        <div class="input-box">
+                            <label for="id">Id</label>
+                            <input title="text" type="text" id="blog-t-id">
+                        </div>
+                        <div class="input-box">
+                            <label for="Author">Author</label>
+                            <input title="text" type="text" id="blog-t-author">
+                        </div> 
+                        <div class="input-box">
+                            <label for="Title">Title</label>
+                            <input title="text" type="text" id="blog-t-title">
+                        </div> 
+                        <div class="input-box">
+                            <label for="body">Body</label>
+                            <textarea title="text" type="text" id="blog-t-Body"></textarea>
+                        </div>
+                        <div class="input-box">
+                            <button id="add-blog-btn" type="submit">Add</button>
+                            <button type="submit">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <script src="blogs dashboard.js"></script>
     </body>
 </html>

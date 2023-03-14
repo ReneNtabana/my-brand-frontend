@@ -9,7 +9,7 @@ nav{
 }
 
 .side-nav{
-    background-image:  url(../images/folk-pattern-black.png);
+    background-image:  url(./images/folk-pattern-black.png);
     width: 18%;
     height: 100%;
     border-radius:0px 40px 40px 0px;
@@ -74,17 +74,16 @@ nav{
     left: 30%;
 }
 
-h2{
-    margin-left: 5%;
-    font-size: 14px;
-    margin-top: 25px;
+.header{
+    position:absolute;
+    right: 30%;
+    bottom: 87%;
+    font-size: 85px;
+    color: #000000;
+    font-family: verdaana;
+    font-weight: bold;
 }
 
-p {
-    margin-left: 5%;
-    font-size: 14px;
-    margin-top: 0px;
-}
 
 .dashboard-body{
     position: absolute;
