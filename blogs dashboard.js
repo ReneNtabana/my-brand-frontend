@@ -36,71 +36,7 @@
         
 // }
 
-// const form = document.getElementById('dashboard-blog-form');
-// const blogId = document.getElementById('blogId');
-// const title = document.getElementById('titlesInput');
-// const author = document.getElementById('authorsInput');
-// const body = document.getElementById('FormTextInput');
 
-// form.addEventListener('submit', e => {
-//     e.preventDefault();
-
-//     validateInputs();
-// });
-
-// const setError = (element, message) => {
-//     const inputControl = element.parentElement;
-//     const errorDisplay = inputControl.querySelector('.error');
-
-//     errorDisplay.innerText = message;
-//     inputControl.classList.add('error');
-//     inputControl.classList.remove('success')
-// }
-
-// const setSuccess = element => {
-//     const inputControl = element.parentElement;
-//     const errorDisplay = inputControl.querySelector('.error');
-
-//     errorDisplay.innerText = '';
-//     inputControl.classList.add('success');
-//     inputControl.classList.remove('error');
-// };
-
-// const validateInputs = () => {
-//     const blogValue = blogId.value.trim();
-//     const titleValue = title.value.trim();
-//     const authorValue = author.value.trim();
-//     const bodyValue = body.value.trim();
-
-//     if(blogValue === '') {
-//         setError(blogId, 'Input Blog Id ');
-//     } else {
-//         setSuccess(blogId);
-//     }
-//     if(authorValue === '') {
-//         setError(author, 'Input Author name');
-//     } else {
-//         setSuccess(author);
-//     }
-
-//     if(titleValue === '') {
-//         setError(title, 'Input Title');
-//     } else {
-//         setSuccess(title);
-//     }
-
-//     if(bodyValue === '') {
-//         setError(body, 'Input Body');
-//     } else {
-//         setSuccess(body);
-//     }
-
-//     if(blogValue && authorValue && titleValue && bodyValue){
-//         return true;
-//     } else {
-//         return false;
-//     }
-// };
 
 var newBlog = document.querySelector("#newBlog");
 var modal = document.querySelector(".modal");
@@ -116,10 +52,11 @@ closeBtn.addEventListener("click",()=>{
 var userData = [];
 var form = document.querySelector("#newBlogForm");
 var id = document.getElementById("blog-t-id");
-var author = document.getElementById("blog-t-author");
+var author= document.getElementById("blog-t-author");
 var title = document.getElementById("blog-t-title");
-var body = document.getElementById("blog-t-body");
+var body = document.querySelector(".blog-t-body")
 var addBlog = document.querySelector("#add-blog-btn");
+var update = document.querySelector("#updateBlog")
 var imgUrl;
 
 // end all global variables
@@ -129,7 +66,7 @@ var imgUrl;
 addBlog.onclick = function(e){
     e.preventDefault();
     getDataFromLocal(); 
-    newBlogData();
+    newBlogData(title, author, body);
     newBlogForm.reset('');
     closeBtn.click();
 }
@@ -140,6 +77,7 @@ addBlog.onclick = function(e){
 if(localStorage.getItem("userData") != null){
     userData = JSON.parse(localStorage.getItem("userData"));
 }
+
 
 function newBlogData(){
     userData.push({
@@ -166,8 +104,8 @@ const getDataFromLocal = () =>{
         <td><img src="${data.blogImage}" width="40" height="40"></td>
         <td>${data.author}</td>
         <td>
-            <button id="edit-button" title="Edit" type="button"><i class="fa fa-eye"></i></button>
-            <button class="delete-button" title="Delete" type="button"><i class="fa fa-trash"></i></button>
+            <button class="edit-button" title="Edit" type="button"><i class="fa fa-eye"></i>Edit</button>
+            <button class="delete-button" title="Delete" type="submit"><i class="fa fa-trash"onclick="deleteBlog"></i>Delete</button>
         </td>
     </tr>
         `;
@@ -176,13 +114,63 @@ const getDataFromLocal = () =>{
 
 // .................................deleting blogs................................
 var i;
-var delBtn = document.querySelectorAll(".delete-button")
-for (i=0;i<delBtn.length;i++){
+var delBtn = document.querySelectorAll(".delete-button");
+for (i=0; i < delBtn. length;i++){
     delBtn[i].onclick = function(){
         var tr= this.parentElement.parentElement;
         var id = tr.getAttribute("index");
-        userData.splice(id,1);
-        tr.remove();
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this Blog!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+                userData.splice(id,1);
+                localStorage.setItem("userData",JSON.stringify(userData));
+                tr.remove();
+              swal("Poof! Your Blog has been deleted!", {
+                icon: "success",
+              });
+            } else {
+              swal("Your Blog is safe!");
+            }
+          });
+       
+    }
+}
+
+//.................................updating blog....................................
+var allEditBtn = document.querySelectorAll(".edit-button");
+for( i = 0;i < allEditBtn.length;i++){
+    allEditBtn[i].onclick = function(){
+        var tr = this.parentElement.parentElement;
+        var td = tr.getElementByTagName("TD");
+        var index = tr.getAttribute("index");
+        var imgTag = td[1].getElementByTagName("IMG");
+        var blogImage = imgTag[0].src;
+        var id = td[2].innerHTML;
+        var author = td[3].innerHTML;
+        var title = td[4].innerHTML;
+        newBlog.click();
+        addBlog.disabled = true; 
+        update.disabled = false; 
+        id.value = id;
+        author.value = author;
+        title.value = title;
+        blog_image.src = blogImage; 
+        update.onclick = function(e){
+            userData[index] = {
+                id: id.value,
+                author: author.value,
+                title: title.value,
+                blogImage: uploadImage.value == "" ?blog_image.src : imgUrl
+            }
+            localStorage.setItem("userData",JSON.stringify(userData));
+        }
+        
     }
 }
 //................................uploading image.....................................
@@ -201,3 +189,90 @@ uploadImage.onchange = function(){
         alert("File size is too long");
     }
 }
+
+//........................searching for blogs...............................
+var searchEl = document.querySelector("#search-blog");
+searchEl.oninput = function(){
+    searchFuc();
+}
+
+function searchFuc(){
+    var tr = tableData.querySelectorAll("TR");
+    var filter = searchEl.value.toLowerCase();
+    var i;
+    for(i=0;i<tr.length;i++){
+        var td = tr[i].getElementByTagName("TD")[2];
+        var id = td.innerHTML;
+        if(td.toLowerCase().indexOf(filter)> -1){
+            tr[1].style.display = "";
+        }else{
+            tr[1].style.display = "none";
+        }
+    }
+}
+
+//.....................form validation...........................
+
+var userData = [];
+var form = document.querySelector("#newBlogForm");
+var id = document.getElementById("blog-t-id");
+var author= document.getElementById("blog-t-author");
+var title = document.getElementById("blog-t-title");
+var body = document.querySelector(".blog-t-body")
+var addBlog = document.querySelector("#add-blog-btn");
+var update = document.querySelector("#updateBlog")
+var imgUrl;
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateInputs();
+});
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
+}
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+
+const validateInputs = () => {
+    const titleValue = title.value.trim();
+    const authorValue = author.value.trim();
+    const bodyValue = body.value.trim();
+
+    if(authorValue === '') {
+        setError(author, 'Input Author name');
+    } else {
+        setSuccess(author);
+    }
+
+    if(titleValue === '') {
+        setError(title, 'Input Title');
+    } else {
+        setSuccess(title);
+    }
+
+    if(bodyValue === '') {
+        setError(body, 'Input Body');
+    } else {
+        setSuccess(body);
+    }
+
+    if(authorValue && titleValue && bodyValue){
+        return true;
+    } else {
+        return false;
+    }
+};

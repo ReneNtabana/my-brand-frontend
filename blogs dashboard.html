@@ -53,7 +53,14 @@
                             </div>
 
                         </form> -->
-                        <button type="submit" id="newBlog"><i class="fa fa-plus"></i>&nbsp; Create Blog</button>
+                        <div class="createBlog">
+                            <button type="submit" id="newBlog"><i class="fa fa-plus"></i>&nbsp; Create Blog</button>
+                            <div class="search-for-blog">
+                                <i class="fa fa-search"></i>
+                                <input type="text" id="search-blog" title="search" placeholder="search blog's id...">
+                                <button id="search-btn" type="button">Search</button>
+                            </div>    
+                        </div>    
                         <td class="section-b">
                             <table class="blog-table">
                                 
@@ -75,8 +82,8 @@
                                         <td>hello world</td>
                                         <td>hello world</td>
                                         <td>
-                                            <button id="edit-button" title="Edit" type="button"><i class="fa fa-eye"></i></button>
-                                            <button class="delete-button" title="Delete" type="button"><i class="fa fa-trash"></i></button>
+                                            <button id="edit-button" title="Edit" type="button"><i class="fa fa-eye">Edit</i></button>
+                                            <button class="delete-button" title="Delete" type="button"><i class="fa fa-trash">Delete</i></button>
                                         </td>
                                     </tr> -->
                                 </tbody>
@@ -99,22 +106,26 @@
                         <div class="input-box">
                             <label for="id">Id</label>
                             <input title="text" type="text" id="blog-t-id">
+                            <div class="error"></div>
                         </div>
                         <div class="input-box">
                             <label for="Author">Author</label>
                             <input title="text" type="text" id="blog-t-author">
+                            <div class="error"></div>
                         </div> 
                         <div class="input-box">
                             <label for="Title">Title</label>
                             <input title="text" type="text" id="blog-t-title">
+                            <div class="error"></div>
                         </div> 
                         <div class="input-box">
                             <label for="body">Body</label>
                             <textarea title="text" type="text" id="blog-t-Body"></textarea>
+                            <div class="error"></div>
                         </div>
                         <div class="input-box">
                             <button id="add-blog-btn" type="submit">Add</button>
-                            <button type="submit">Update</button>
+                            <button id="updateBlog" disabled="disabled" type="submit">Update</button>
                         </div>
                     </form>
                 </div>

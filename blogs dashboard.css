@@ -195,6 +195,37 @@ nav{
     height: 40px;
     width: 200px;
     font-size: 25px;
+    margin-top: 15px;
+}
+
+.createBlog{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-for-blog input{
+    width: 50%;
+    margin: 9px 0px;
+    border: none;
+    padding: 10px;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 4px solid rgb(129, 18, 18);
+    font-size: 20px;
+}
+
+#search-btn{
+    height: 40px;
+    font-size: 20px;
+    margin-top: 15px;
+    background-color: #050505;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+#search-btn:hover{
+    background-color:#626060;
 }
 
 #newBlog:hover{
