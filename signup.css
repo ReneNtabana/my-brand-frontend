@@ -29,7 +29,12 @@ body{
     text-align: center;
     font-size: 25px;
     color: black;
+    transition:0.5s;
 } 
+
+.logo-nav:hover{
+    transform: scale(1.5);
+}
 .home-nav{
     height: 30px;
     margin-left: 300px;
@@ -38,6 +43,10 @@ body{
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+.home-nav:hover{
+    transform: scale(1.5);
 }
  
 .about-me-nav{
@@ -48,6 +57,11 @@ body{
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+
+.about-me-nav:hover{
+    transform: scale(1.5);
 }
 
 .skills-nav{
@@ -58,6 +72,11 @@ body{
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+
+.skills-nav:hover{
+    transform: scale(1.5);
 }
 
 .portfolio-nav{
@@ -68,6 +87,11 @@ body{
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+
+.portfolio-nav:hover{
+    transform: scale(1.5);
 }
 
 .contact-me-nav{
@@ -78,6 +102,10 @@ body{
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+.contact-me-nav:hover{
+    transform: scale(1.5);
 }
 
 .blogs-nav{
@@ -88,6 +116,11 @@ body{
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+
+.blogs-nav:hover{
+    transform: scale(1.5);
 }
 
 .login-button-nav{
@@ -103,9 +136,12 @@ body{
    text-align: center;
    filter: drop-shadow(0px 4px 4px #FFFFFF);
    cursor: pointer;
-   text-decoration: none;
+   transition: 0.5s;
 }
 
+.login-button-nav:hover{
+    transform: scale(1.5);
+}
 .Login-text{
     color: #fafafa;
     text-decoration: none;

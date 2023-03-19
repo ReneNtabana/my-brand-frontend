@@ -2,7 +2,7 @@
     /* position: absolute; */
     margin: auto;
     height: 100%;
-    background-image: url(../images/folk-pattern-black.png);
+    background-image: url(./images/folk-pattern-black.png);
     background-size: 50%;
 }
 .nav-bar{
@@ -29,7 +29,12 @@
     text-align: center;
     font-size: 25px;
     color: black;
+    transition:0.5s;
 } 
+
+.logo-nav:hover{
+    transform: scale(1.5);
+}
 .home-nav{
     height: 30px;
     margin-left: 300px;
@@ -38,6 +43,10 @@
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+.home-nav:hover{
+    transform: scale(1.5);
 }
  
 .about-me-nav{
@@ -48,6 +57,11 @@
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+
+.about-me-nav:hover{
+    transform: scale(1.5);
 }
 
 .skills-nav{
@@ -58,6 +72,11 @@
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+
+.skills-nav:hover{
+    transform: scale(1.5);
 }
 
 .portfolio-nav{
@@ -68,6 +87,11 @@
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+
+.portfolio-nav:hover{
+    transform: scale(1.5);
 }
 
 .contact-me-nav{
@@ -78,6 +102,10 @@
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+.contact-me-nav:hover{
+    transform: scale(1.5);
 }
 
 .blogs-nav{
@@ -88,6 +116,11 @@
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+
+.blogs-nav:hover{
+    transform: scale(1.5);
 }
 
 .login-button-nav{
@@ -103,6 +136,11 @@
    text-align: center;
    filter: drop-shadow(0px 4px 4px #FFFFFF);
    cursor: pointer;
+   transition: 0.5s;
+}
+
+.login-button-nav:hover{
+    transform: scale(1.5);
 }
  
 .Login-text{
@@ -122,16 +160,22 @@
 
 .blog1-container{
     height: 385px;
+    cursor:pointer;
     width: 300px;
     background-color: #000000;
     margin-left: 50px;
     border-radius: 10px;
     margin-left: 200px;
     filter: drop-shadow(0px 4px 4px #FFFFFF);
+    transition: 1s;
+}
+
+.blog1-container:hover{
+    transform: scale(1.5);
 }
 
 .blog1-image{
-    background-image: url(../images/Rectangle\ 31.png);
+    background-image: url(./images/Rectangle\ 31.png);
     height: 150px;
     width: 300px;
 }
@@ -159,7 +203,7 @@ p{
 }
 
 .blog2-image{
-    background-image: url(../images/Rectangle\ 30.png);
+    background-image: url(./images/Rectangle\ 30.png);
     height: 150px;
     width: 300px;
 }

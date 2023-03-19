@@ -3,7 +3,7 @@ body{
     margin: auto;
     height: 100%;
     width: 100%;
-    background: url(../images/folk-pattern-black.png);
+    background: url(./images/folk-pattern-black.png);
     background-size: 50%;
 }
 .nav-bar{
@@ -30,7 +30,12 @@ body{
     text-align: center;
     font-size: 25px;
     color: black;
+    transition:0.5s;
 } 
+
+.logo-nav:hover{
+    transform: scale(1.5);
+}
 .home-nav{
     height: 30px;
     margin-left: 300px;
@@ -39,6 +44,10 @@ body{
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+.home-nav:hover{
+    transform: scale(1.5);
 }
  
 .about-me-nav{
@@ -49,6 +58,11 @@ body{
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+
+.about-me-nav:hover{
+    transform: scale(1.5);
 }
 
 .skills-nav{
@@ -59,6 +73,11 @@ body{
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+
+.skills-nav:hover{
+    transform: scale(1.5);
 }
 
 .portfolio-nav{
@@ -69,6 +88,11 @@ body{
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+
+.portfolio-nav:hover{
+    transform: scale(1.5);
 }
 
 .contact-me-nav{
@@ -79,6 +103,10 @@ body{
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+.contact-me-nav:hover{
+    transform: scale(1.5);
 }
 
 .blogs-nav{
@@ -89,6 +117,11 @@ body{
     font-family: impact, sans-serif;
     color: #FFF;
     text-decoration: none;
+    transition:0.5s;
+}
+
+.blogs-nav:hover{
+    transform: scale(1.5);
 }
 
 .login-button-nav{
@@ -104,8 +137,12 @@ body{
    text-align: center;
    filter: drop-shadow(0px 4px 4px #FFFFFF);
    cursor: pointer;
+   transition: 0.5s;
 }
 
+.login-button-nav:hover{
+    transform: scale(1.5);
+}
 .Login-text{
     color: #fafafa;
     text-decoration: none;
@@ -124,19 +161,43 @@ display: flex;
 .img-vector{
     margin-top: 50px;
     margin-left: 220px;
+    transition: 0.5s;
+}
+
+.img-vector:hover{
+    transform: scale(1.2);
 }
 
 .skills{
     margin-top: 50px;
     margin-left: 70px;
+   
+}
+ 
+.front-skill{
+    transition: 0.5s;
+}
+
+.front-skill:hover{
+    transform: scale(1.2);
 }
 
 .middle-skills{
     padding-top: 40px;
+    transition: 0.5s;
+}
+
+.middle-skills:hover{
+    transform: scale(1.2);
 }
 
 .last-skills{
     padding-top: 40px;
+    transition: 0.5s;
+}
+
+.last-skills:hover{
+    transform: scale(1.2);
 }
 
 .social-icons{
@@ -144,32 +205,60 @@ display: flex;
     margin-top: 88px;
     align-items: center;
 }
-
 .instagram-icon{
     height: 40px;
     width: 40px;
     margin-bottom: 6px;
+    cursor: pointer;
+    transition: 0.5s;
 }
+
+.instagram-icon:hover{
+    transform: scale(1.2);
+}
+
+
 .linkedin-icon{
     margin-left: 15px;
     margin-bottom: 8px;
     height: 38px;
     width: 38px;
+    cursor: pointer;
+    transition: 0.5s;
 }
-   
+
+.linkedin-icon:hover{
+    transform: scale(1.2);
+}
+
+
 .Gmail-icon{
     margin-left: 15px;
     margin-bottom: 1px;
     height: 54px;
     width: 50px;
+    cursor: pointer;
+    transition: 0.5s;
 }
+
+.Gmail-icon:hover{
+    transform: scale(1.2);
+}
+
 
 .github-icon{
     margin-left: 15px;
     margin-bottom: 7px;
     height: 40px;
     width: 40px;
+    cursor: pointer;
+    transition: 0.5s;
 }
+
+.github-icon:hover{
+    transform: scale(1.2);
+}
+
 
 .copyright{
     text-align: center;

@@ -31,6 +31,11 @@ nav{
     cursor: pointer;
     text-decoration: none;
     font-size: 30px;
+    transition: 0.5s;
+}
+
+.blogs-page-nav:hover{
+    transform: scale(1.2);
 }
 
 .home-button{
@@ -42,7 +47,11 @@ nav{
     height: 40px;
     font-size: 30px;
     cursor: pointer;
-    
+    transition: 0.5s;
+}
+
+.home-button:hover{
+    transform: scale(1.2);
 }
 
 .top-nav{
@@ -72,6 +81,11 @@ nav{
     cursor: pointer;
     text-decoration: none;
     left: 30%;
+    transition: 0.5s;
+}
+
+.signout-nav:hover{
+    transform: scale(1.2);
 }
 
 .header{
@@ -118,7 +132,18 @@ h1{
     width: 250px;
     background-color: rgb(255, 255, 255);
     border-radius: 40px 40px 40px 40px;
+    cursor: pointer;
     margin-left: 50px;
+    animation: shake 0.8s linear infinite;
+}
+
+ @keyframes shake{
+    0% {
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
 }
 
 .item2{
