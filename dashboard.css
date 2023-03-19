@@ -134,16 +134,11 @@ h1{
     border-radius: 40px 40px 40px 40px;
     cursor: pointer;
     margin-left: 50px;
-    animation: shake 0.8s linear infinite;
+    transition: 0.5s;
 }
 
- @keyframes shake{
-    0% {
-        transform: rotate(10deg);
-    }
-    50%{
-        transform: rotate(-10deg);
-    }
+.item1:hover{
+   transform:scale(1.1);
 }
 
 .item2{
@@ -152,7 +147,12 @@ h1{
     background-color: rgb(255, 255, 255);
     border-radius: 40px 40px 40px 40px;
     margin-left: 50px;
+    transition: 0.5s;
     }
+
+.item2:hover{
+    transform:scale(1.1);
+ }
 
 .item3{
      height: 200px;
@@ -160,7 +160,12 @@ h1{
      background-color: rgb(255, 255, 255);
      border-radius: 40px 40px 40px 40px;
      margin-left: 50px;
+     transition: 0.5s;
      }
+
+.item3:hover{
+    transform:scale(1.1);
+ }
 
      .container-paragraph{
         font-size: 15px;

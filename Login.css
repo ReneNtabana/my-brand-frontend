@@ -3,7 +3,7 @@ body{
     margin: auto;
     height: 100%;
     width: 100%;
-    background: url(../images/folk-pattern-black.png);
+    background: url(./images/folk-pattern-black.png);
     background-size: 50%;
 }
 .nav-bar{

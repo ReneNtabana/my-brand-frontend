@@ -2,7 +2,7 @@ body{
     /* position: absolute; */
     margin: auto;
     height: 100vh;
-    background-image: url(../images/folk-pattern-black.png);
+    background-image: url(./images/folk-pattern-black.png);
     background-size: 50%;
 }
 .nav-bar{
