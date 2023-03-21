@@ -144,6 +144,7 @@ h1{
 .item2{
     height: 200px;
     width: 250px;
+    transform-style: preserve-3d;
     background-color: rgb(255, 255, 255);
     border-radius: 40px 40px 40px 40px;
     margin-left: 50px;
